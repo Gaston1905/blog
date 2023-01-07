@@ -1,0 +1,16 @@
+#background-contact {
+  background-image: url('../../../assets/cannabis-6253723_1920.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+#contact-background-glass {
+  background: rgba( 0, 0, 0, 0.6 );
+  padding: 1.5em;
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 10px );
+  -webkit-backdrop-filter: blur( 10px );
+}
+

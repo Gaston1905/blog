@@ -20,7 +20,9 @@ import { HomeComponent } from './home/home.component';
     ComponentsModule
   ],
   exports: [
-    HomeComponent
+    HomeComponent,
+    NavbarComponent,
+    FooterComponent
   ]
 })
 export class SharedModule { }
