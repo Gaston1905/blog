@@ -6,6 +6,7 @@ import { NewsComponent } from './news/news.component';
 import { ContactComponent } from './contact/contact.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { LastArticleComponent } from './articles/last-article/last-article.component';
+import { MoreArticlesComponent } from './articles/more-articles/more-articles.component';
 
 
 
@@ -15,7 +16,8 @@ import { LastArticleComponent } from './articles/last-article/last-article.compo
     ContactComponent,
     FormContactComponent,
     ArticlesComponent,
-    LastArticleComponent
+    LastArticleComponent,
+    MoreArticlesComponent
   ],
   imports: [
     CommonModule
