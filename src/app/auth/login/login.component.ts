@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
       return
     }
     event.preventDefault;
-    this.authService.logged(this.form.value).subscribe((data) => {
+    this.authService.logged(this.form.value).subscribe((data: any) => {
       this.route.navigate(['/home'])
     })
   }
