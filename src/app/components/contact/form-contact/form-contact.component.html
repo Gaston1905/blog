@@ -8,18 +8,18 @@
     <div class="col-lg-6 order-lg-1 pb-5 mb-5 px-5" >
       <div class="d-flex justify-content-center" id="form-contact-background">
         <div class="rounded px-4">
-          <form >
+          <form [formGroup]="form">
             <h4 class="title text-light">Contacto</h4>
             <div>
-              <label class="text-light">Nombre</label>
+              <label class="text-light">Nombre <span class=" text-danger">*</span></label>
               <input type="text" class="form-control rounded shadow-sm text-white bg-dark mb-3 form-input" formControlName="name" id="name" placeholder="Nombre" required>
             </div>
             <div>
-              <label class="text-light">Email</label>
+              <label class="text-light">Email <span class=" text-danger">*</span></label>
               <input type="email" class="form-control rounded shadow-sm text-white bg-dark mb-3 form-input" formControlName="email" placeholder="Email@example.com" required>
             </div>
             <div>
-              <label class="text-light">Mensaje</label>
+              <label class="text-light">Mensaje <span class=" text-danger">*</span></label>
               <textarea id="message" class="form-control rounded shadow-sm text-white bg-dark mb-3 form-text-area" rows="5" cols="30" formControlName="message" placeholder="Mensaje" required></textarea>
             </div>
             <div>
