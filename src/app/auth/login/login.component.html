@@ -12,14 +12,14 @@
                       <h4 class="title text-light">Login</h4>
                       <div>
                         <label class="text-light">Nombre</label>
-                        <input type="text" class="form-control rounded shadow-sm text-white bg-dark mb-3 form-input" formControlName="name" id="name" placeholder="Nombre" required>
+                        <input type="email" class="form-control rounded shadow-sm text-white bg-dark mb-3 form-input" formControlName="email" id="name" placeholder="Nombre" required>
                       </div>
                       <div>
-                        <label class="text-light">Email</label>
-                        <input type="email" class="form-control rounded shadow-sm text-white bg-dark mb-3 form-input" formControlName="email" placeholder="Email@example.com" required>
+                        <label class="text-light">Password</label>
+                        <input type="password" class="form-control rounded shadow-sm text-white bg-dark mb-3 form-input" formControlName="password" placeholder="Password" required>
                       </div>
                       <div>
-                        <button type="submit" class="btn btn-sm btn-outline-light text-light" [disabled]="!form.invalid">Ingresar</button>
+                        <button type="submit" class="btn btn-sm btn-outline-light text-light">Ingresar</button>
                       </div>
                     </form>
                   </div>

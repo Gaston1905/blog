@@ -1,3 +1,4 @@
+import { ServicesModule } from './services/services.module';
 import { AuthModule } from './auth/auth.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -17,7 +18,8 @@ import { ComponentsModule } from './components/components.module';
     AppRoutingModule,
     SharedModule,
     ComponentsModule,
-    AuthModule
+    AuthModule,
+    ServicesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

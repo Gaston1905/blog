@@ -1,4 +1,5 @@
-import { RouterModule } from '@angular/router';
+import { AuthService } from './../../services/auth.service';
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 
@@ -13,11 +14,12 @@ export class LoginComponent implements OnInit {
 
   constructor(
                 private formBuilder: FormBuilder,
-                private route: RouterModule
+                private route: Router,
+                private authService: AuthService
               ) {
 
     this.form = this.formBuilder.group({
-      name: new FormControl('', Validators.required),
+      email: new FormControl('', Validators.required),
       password: new FormControl('', Validators.required)
     })
    }
@@ -38,7 +40,7 @@ export class LoginComponent implements OnInit {
       return
     }
     event.preventDefault;
-    this.authService.Logged(this.form.value).subscribe((data) => {
+    this.authService.logged(this.form.value).subscribe((data) => {
       this.route.navigate(['/home'])
     })
   }
