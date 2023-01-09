@@ -23,7 +23,7 @@
               <textarea id="message" class="form-control rounded shadow-sm text-white bg-dark mb-3 form-text-area" rows="5" cols="30" formControlName="message" placeholder="Mensaje" required></textarea>
             </div>
             <div>
-              <button type="submit" class="btn btn-sm btn-outline-light text-light">Enviar</button>
+              <button type="submit" class="btn btn-sm btn-outline-light text-light" [disabled]="form.invalid" (click)="formData()">Enviar</button>
             </div>
           </form>
         </div>

@@ -1,4 +1,5 @@
-import { FormBuilder, FormGroup, Validator, FormControl, Validators } from '@angular/forms';
+import { FormContactService } from './../../../services/form-contact.service';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 
@@ -12,7 +13,8 @@ export class FormContactComponent implements OnInit {
   form!: FormGroup;
 
   constructor(
-                private FormBuilder: FormBuilder
+                private FormBuilder: FormBuilder,
+                private formContact: FormContactService
   ) {
     this.form = this.FormBuilder.group({
       name: new FormControl('', Validators.required),
@@ -22,6 +24,21 @@ export class FormContactComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  formData () {
+
+    const formData: FormData = this.form.value;
+
+    if(this.form.valid) {
+      this.formContact.sendFormData(formData).subscribe((data: any) => {
+        console.log(data);
+        this.form.reset();
+      })
+
+    }
+
+
   }
 
 }
