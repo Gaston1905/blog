@@ -4,16 +4,16 @@
       <div class="col-12 col-lg-8 col-xl-12">
         <div class="lc-block mb-2  py-4 rounded" id="form-background-glass">
           <div class="flex d-flex flex-column " id="form-background-glass">
-            <form>
+            <form [formGroup]="form">
                 <div>
                   <label class="text-light">Título</label>
                   <br>
-                  <input type="text" class="form-control-sm" placeholder="Título de la publicación">
+                  <input type="text" class="form-control-sm" formControlName="title" placeholder="Título de la publicación" id="title">
                 </div>
                 <div class="mt-2">
                   <label class="text-light">Subtítulo</label>
                   <br>
-                  <input type="text" class="form-control-sm" placeholder="Subtítulo de la publicación">
+                  <input type="text" class="form-control-sm" formControlName="substitle" placeholder="Subtítulo de la publicación" id="substitle">
                 </div>
                 <div class="mt-4">
                   <label class="text-light">Ingresa aquí tus fotos</label>
@@ -23,7 +23,7 @@
                 <div class="mt-4">
                   <label class="text-light">Texto del post</label>
                   <br>
-                  <textarea class="form-control-lg" placeholder="Contenido de la publicación"></textarea>
+                  <textarea class="form-control-lg" formControlName="contentArticle" placeholder="Contenido de la publicación" id="contentArticle"></textarea>
                 </div>
                 <div>
                   <button type="submit" class="btn btn-sm btn-light mt-2">Publicar</button>
@@ -34,4 +34,43 @@
       </div>
     </div>
   </div>
+</div>
+
+
+<div class="container">
+
+  <div class="container">
+    <div class="d-flex pt-5 mt-5">
+      <div class="container align-self-center">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8 text-center">
+            <div class="lc-block mb-2 py-4 rounded text-white">
+              <p class="fs-1 fw-bolder">{{form.value.title}}</p>
+              <p class="fs-5 fw-bold">{{form.value.substitle}}</p>
+
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div *ngFor="let chunk of form.value.contentArticle | splitLiveArticle:maxWords; index as i">
+
+  <div class="row pt-5 mt-5 g-0">
+  <div lc-helper="background" class="col-lg-3 order-lg-2 rounded" style="min-height: 45vh; background-size: cover; background-position: center; background-image: url('https://images.unsplash.com/photo-1558985590-e84f133009b2?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1352&amp;q=80');">
+
+  </div>
+  <div class="col-lg-8 order-lg-1 my-auto px-5 py-5">
+    <div class="lc-block text-white">
+      <div editable="rich" id="liveArticle-background-glass">
+        <div  *ngIf="i === 0" class="container-1" style="white-space: pre-line">{{chunk}}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 </div>

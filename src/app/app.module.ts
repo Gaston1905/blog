@@ -1,5 +1,4 @@
-import { ServicesModule } from './services/services.module';
-import { AuthModule } from './auth/auth.module';
+import { PipesModule } from './pipes/pipes.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -8,6 +7,8 @@ import { AppComponent } from './app.component';
 
 import { SharedModule } from './shared/shared.module';
 import { ComponentsModule } from './components/components.module';
+import { ServicesModule } from './services/services.module';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ComponentsModule } from './components/components.module';
     SharedModule,
     ComponentsModule,
     AuthModule,
-    ServicesModule
+    ServicesModule,
+    PipesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,4 @@
+import { PipesModule } from './../pipes/pipes.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormContactComponent } from './contact/form-contact/form-contact.component';
 import { NgModule } from '@angular/core';
@@ -10,6 +11,7 @@ import { MoreArticlesComponent } from './articles/more-articles/more-articles.co
 import { CrudArticlesComponent } from './articles/crud-articles/crud-articles.component';
 import { CreateArticleComponent } from './articles/crud-articles/create-article/create-article.component';
 
+import { SplitLiveArticlePipe } from './../pipes/split-live-article.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,11 @@ import { CreateArticleComponent } from './articles/crud-articles/create-article/
   ],
   imports: [
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    PipesModule
+  ],
+  providers: [
+    SplitLiveArticlePipe
   ],
   exports: [
     NewsComponent
