@@ -7,8 +7,8 @@ import { ContactComponent } from './contact/contact.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { LastArticleComponent } from './articles/last-article/last-article.component';
 import { MoreArticlesComponent } from './articles/more-articles/more-articles.component';
-
-
+import { CrudArticlesComponent } from './articles/crud-articles/crud-articles.component';
+import { CreateArticleComponent } from './articles/crud-articles/create-article/create-article.component';
 
 
 @NgModule({
@@ -18,7 +18,9 @@ import { MoreArticlesComponent } from './articles/more-articles/more-articles.co
     FormContactComponent,
     ArticlesComponent,
     LastArticleComponent,
-    MoreArticlesComponent
+    MoreArticlesComponent,
+    CrudArticlesComponent,
+    CreateArticleComponent
   ],
   imports: [
     CommonModule,

@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  data: string = '';
 
   constructor( public authService: AuthService ) {
 
@@ -16,7 +15,9 @@ export class NavbarComponent implements OnInit {
 
   isLogged = () => this.authService.loggedIn();
 
+
   ngOnInit(): void {
+
   }
 
 

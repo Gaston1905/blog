@@ -1,0 +1,10 @@
+<div class="container pt-5 mt-5" *ngIf="this.authService.loggedIn()">
+  <button class="btn btn-sm btn-light mt-5" (click)="toggleForm()" id="createForm">Crear post</button>
+  <button class="btn btn-sm btn-light mt-5 ms-2" (click)="toggleForm()" id="editForm">Editar post</button>
+  <button class="btn btn-sm btn-light mt-5 ms-2" (click)="toggleForm()" id="deleteForm">Eliminar post</button>
+</div>
+
+
+<!------------Create Post---------------->
+
+<app-create-article *ngIf="showForm"></app-create-article>

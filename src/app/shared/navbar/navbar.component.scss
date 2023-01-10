@@ -23,7 +23,17 @@ a:hover {
 
 .bi-person-fill-lock {
   color: #ff9f1a;
+
 }
+
+#cursor-key-orange {
+  cursor: url('../../../assets/key-fill-custom.svg'), context-menu;
+}
+
+#cursor-key-red {
+  cursor: url('../../../assets/key-fill-red.svg'), context-menu;
+}
+
 
 
 
