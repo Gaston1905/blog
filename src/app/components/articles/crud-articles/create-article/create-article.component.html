@@ -23,7 +23,7 @@
                 <div class="mt-4">
                   <label class="text-light">Texto del post</label>
                   <br>
-                  <textarea class="form-control-lg" formControlName="contentArticle" placeholder="Contenido de la publicación" id="contentArticle"></textarea>
+                  <textarea class="form-control-lg" formControlName="contentArticle" placeholder="Contenido de la publicación" id="contentArticle" width="200px"></textarea>
                 </div>
                 <div>
                   <button type="submit" class="btn btn-sm btn-light mt-2">Publicar</button>
@@ -59,18 +59,42 @@
 
 <div *ngFor="let chunk of form.value.contentArticle | splitLiveArticle:maxWords; index as i">
 
-  <div class="row pt-5 mt-5 g-0">
-  <div lc-helper="background" class="col-lg-3 order-lg-2 rounded" style="min-height: 45vh; background-size: cover; background-position: center; background-image: url('https://images.unsplash.com/photo-1558985590-e84f133009b2?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1352&amp;q=80');">
+  <div class="row pt-5 mt-5 g-0" *ngIf="i === nextContainer">
+    <div lc-helper="background" class="col-lg-3 order-lg-2 rounded" style="min-height: 45vh; background-size: cover; background-position: center; background-image: url('https://images.unsplash.com/photo-1558985590-e84f133009b2?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1352&amp;q=80');"></div>
 
-  </div>
-  <div class="col-lg-8 order-lg-1 my-auto px-5 py-5">
-    <div class="lc-block text-white">
-      <div editable="rich" id="liveArticle-background-glass">
-        <div  *ngIf="i === 0" class="container-1" style="white-space: pre-line">{{chunk}}</div>
+    <div class="col-lg-8 order-lg-1 my-auto px-5 py-5">
+      <div class="lc-block text-white">
+        <div editable="rich" id="liveArticle-background-glass">
+          <div  *ngIf="i === 0" class="container-1" style="white-space: pre-line">{{chunk}}</div>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
+  <div class="row g-0 pt-5" *ngIf="i === nextContainer + 1">
+    <div lc-helper="background" class="offset-lg-1 col-lg-3 order-lg-1 rounded" style="min-height: 45vh; background-size: cover;background-position: center; background-image: url('https://images.unsplash.com/photo-1491926626787-62db157af940?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;h=768&amp;fit=crop&amp;ixid=eyJhcHBfaWQiOjM3ODR9');">
+    </div>
+    <div class="col-lg-8 my-auto order-lg-2 px-5 py-5">
+      <div class="lc-block text-white">
+        <div editable="rich" id="liveArticle-background-glass">
+          <div  *ngIf="i === 1" class="container-2" style="white-space: pre-line">{{chunk}}</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row g-0 pt-5" *ngIf="i === nextContainer + 2">
+    <div lc-helper="background" class="col-lg-3 order-lg-2 rounded" style="min-height: 45vh; background-size: cover; background-position: center; background-image: url('https://images.unsplash.com/photo-1558985590-e84f133009b2?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1352&amp;q=80');">
+
+    </div>
+    <div class="col-lg-8 order-lg-1 my-auto px-5 py-5">
+      <div class="lc-block text-white">
+        <div editable="rich" id="liveArticle-background-glass">
+          <div  *ngIf="i === 2" class="container-3" style="white-space: pre-line">{{chunk}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </div>

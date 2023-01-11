@@ -14,8 +14,9 @@ export class SplitLiveArticlePipe implements PipeTransform {
       count ++;
       chunk += words[i] + ' ';
       if (count === maxWords) {
-        chunks.push(chunks);
+        chunks.push(chunk);
         chunk = '';
+        console.log(chunk)
         count = 0;
       }
     }

@@ -29,9 +29,6 @@ import { SplitLiveArticlePipe } from './../pipes/split-live-article.pipe';
     ReactiveFormsModule,
     PipesModule
   ],
-  providers: [
-    SplitLiveArticlePipe
-  ],
   exports: [
     NewsComponent
   ]

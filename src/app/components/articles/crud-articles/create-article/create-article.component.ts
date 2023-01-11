@@ -12,7 +12,8 @@ export class CreateArticleComponent implements OnInit {
   substitle: string = '';
   contentArticle: string = '';
   form!: FormGroup;
-  maxWords = 10;
+  maxWords: number = 10;
+  nextContainer: number = 0;
 
   constructor() { }
 
